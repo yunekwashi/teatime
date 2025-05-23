@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious milk tea and bubble tea drinks. Pre-order your favorite drinks online!">
+    <title>TeaTime - Premium Milk Tea Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TeaTime</div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <!-- Video Background -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="milktea.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Fallback Image Background -->
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Welcome to TeaTime</h1>
+                <p>Experience the perfect blend of premium tea and delightful flavors</p>
+                <button class="cta-button" onclick="scrollToMenu()">View Menu</button>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu">
+            <div class="menu-bg-overlay"></div>
+            <div class="menu-content">
+                <h2>Our Menu</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="milk-tea">Milk Tea</button>
+                    <button class="category-btn" data-category="fruit-tea">Fruit Tea</button>
+                    <button class="category-btn" data-category="special">Special Drinks</button>
+                </div>
+                <div class="menu-grid">
+                    <!-- 
+                    To add a new menu item:
+                    1. Save your image in the 'images' folder
+                    2. Copy this template and update the following:
+                       - data-category: milk-tea, fruit-tea, or special
+                       - img src: path to your image (e.g., "images/your-image.jpg")
+                       - h3: drink name
+                       - p: description
+                       - price: price in pesos
+                    -->
+                    <div class="menu-item" data-category="milk-tea">
+                        <img src="classic mt.png" alt="Classic Milk Tea">
+                        <h3>Classic Milk Tea</h3>
+                        <p>Our signature blend with rich milk and premium tea</p>
+                        <div class="price">₱85</div>
+                        <button class="order-btn" data-item="Classic Milk Tea">Add to Order</button>
+                    </div>
+
+                    <div class="menu-item" data-category="milk-tea">
+                        <img src="WM milktea.png" alt="Wintermelon Milk Tea">
+                        <h3>Wintermelon Milk Tea</h3>
+                        <p>Sweet wintermelon with creamy milk tea</p>
+                        <div class="price">₱95</div>
+                        <button class="order-btn" data-item="Wintermelon Milk Tea">Add to Order</button>
+                    </div>
+
+                    <div class="menu-item" data-category="fruit-tea">
+                        <img src="BB milktea.webp" alt="Passion Fruit Tea">
+                        <h3>Boba Milk Tea</h3>
+                        <p>Refreshing passion fruit with green tea</p>
+                        <div class="price">₱90</div>
+                        <button class="order-btn" data-item="Passion Fruit Tea">Add to Order</button>
+                    </div>
+
+                    <div class="menu-item" data-category="special">
+                        <img src="Brownsugar mt.webp" alt="Brown Sugar Milk Tea">
+                        <h3>Brown Sugar Milk Tea</h3>
+                        <p>Rich brown sugar with fresh milk and pearls</p>
+                        <div class="price">₱100</div>
+                        <button class="order-btn" data-item="Brown Sugar Milk Tea">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Wintermelon Milk Tea is absolutely amazing! Perfect sweetness and the pearls are always fresh."</p>
+                    <div class="testimonial-author">
+                        <img src="Bimby.jpg" alt="Sarah's profile picture">
+                        <div>
+                            <h4>Bimby Orca</h4>
+                            <p class="title">Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I love how I can pre-order my drinks and they're always ready when I arrive. Great service!"</p>
+                    <div class="testimonial-author">
+                        <img src="Mike.jpg" alt="Mike's profile picture">
+                        <div>
+                            <h4>Mike Chan</h4>
+                            <p class="title">Tea Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Brown Sugar Milk Tea is my go-to drink. The perfect balance of sweetness and tea flavor."</p>
+                    <div class="testimonial-author">
+                        <img src="Kiert.jpg" alt="Emma's profile picture">
+                        <div>
+                            <h4>Kiert Manika</h4>
+                            <p class="title">Loyal Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="features">
+            <h2>Why Choose TeaTime?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Premium Ingredients</h3>
+                    <p>We use only the finest tea leaves and fresh ingredients.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick Service</h3>
+                    <p>Pre-order and pick up your drinks without waiting.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Customizable</h3>
+                    <p>Choose your sweetness level and toppings.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="contact" class="contact">
+            <h2>Pre-Order Your Drinks</h2>
+            <div class="order-container">
+                <div class="cart-summary">
+                    <h3>Your Order</h3>
+                    <div id="cart-items"></div>
+                    <div class="cart-total">
+                        <p>Total: <span id="total-amount">₱0</span></p>
+                    </div>
+                </div>
+                <form id="order-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-time">Pickup Time</label>
+                        <input type="datetime-local" id="pickup-time" name="pickup-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Place Order</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TeaTime</h3>
+                <p>Your perfect tea companion</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Order Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@teatime.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tea Street, City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TeaTime. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
